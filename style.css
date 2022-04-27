@@ -91,10 +91,12 @@ h1 {
 }
 
 .info__answer {
-    margin-bottom: 1rem;
-    transform: translateY(0);
-    visibility: visible;
-    display: initial;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);    
+    transition: all 0.3s ease-in;
+    margin: 0;
+    font-size: 0;
 }
 
 
@@ -119,13 +121,15 @@ h1 {
 }
 
 
-/* JAVASCRIPT */
+        /* JAVASCRIPT */
 
-.info__answer.hidden {
-    visibility: hidden;
-    display: none;
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in;
+.info__answer.active {
+    margin-bottom: 1rem;
+    font-size: 12px;
+    transform: translateY(0);
+    visibility: visible;
+    display: initial;
+    opacity: 1;
 }
 
 .info__question.active {
@@ -136,6 +140,7 @@ h1 {
 .info__arrow.active {
     transform: rotate(180deg);
 }
+
 
         /* CREDITS */
 
