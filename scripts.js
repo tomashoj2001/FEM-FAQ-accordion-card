@@ -37,7 +37,7 @@ function toggleAnswer() {
 function displayAnswer(i) {
     questions[i].classList.toggle('active');
     arrows[i].classList.toggle('active');
-    answers[i].classList.toggle('hidden');
+    answers[i].classList.toggle('active');
 }
 
 questions.forEach(question => question.addEventListener('click', toggleAnswer));
